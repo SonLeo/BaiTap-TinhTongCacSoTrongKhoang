@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính tổng các số trong khoảng</title>
+</head>
+<body>
+    <script>
+        let from = parseInt(prompt("Bạn muốn tính tổng của các số từ: "));
+
+        while (isNaN(from)) {
+            alert("Dữ liệu nhập vào không đúng định dạng, vui lòng nhập lại!")
+            from = parseInt(prompt("Bạn muốn tính tổng của các số từ: "));
+        }
+
+        let to = parseInt(prompt("đến: "));
+        
+        while (isNaN(to)) {
+            alert("Dữ liệu nhập vào không đúng định dạng, vui lòng nhập lại!")
+            to = parseInt(prompt("đến: "));
+        }
+
+        let result = 0;
+
+        if (from <= to) {
+            for (let i = from; i <= to; i++) {
+                result += i;
+            }
+        } else {
+            for (let i = to; i <= from; i++) {
+                result += i;
+            }
+        }
+
+        alert("Tổng các số từ " + from + " đến " + to + " bằng: " + result);
+    </script>
+</body>
+</html>
